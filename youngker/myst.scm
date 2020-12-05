@@ -17,11 +17,11 @@
      (method git-fetch)
      (uri
       (git-reference
-       (url "https://github.com/LukeSmithxyz/st.git")
-       (commit "13b3c631be13849cd80bef76ada7ead93ad48dc6")))
+       (url "https://github.com/youngker/st.git")
+       (commit "db6ed5218cf6b7584f2e715759c671c1b16f9b67")))
      (file-name (git-file-name name version))
      (sha256
-      (base32 "009za6dv8cr2brs31sjqixnkk3jwm8k62qk38sz4ggby3ps9dzf4"))))
+      (base32 "08fqbiz0gp2lnqax7warjwfdq8y6ln8lp4dag28aab7gxsq4i9sc"))))
 
    (arguments
     `(#:make-flags (list "CC=gcc")
