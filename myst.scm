@@ -1,4 +1,4 @@
-(define-module (youngker packages myst)
+(define-module (myst)
   #:use-module ((guix licenses) #:prefix license:)
   #:use-module (guix build-system gnu)
   #:use-module (gnu packages)
@@ -12,9 +12,9 @@
   #:use-module (guix packages)
   #:use-module (guix utils))
 
-(define-public myst
+(define-public yst
   (package
-   (name "myst")
+   (name "yst")
    (version "0.1")
    (source
     (origin
