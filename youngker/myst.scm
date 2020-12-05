@@ -1,5 +1,6 @@
-(define-module (guix packages myst)
+(define-module (youngker myst)
   #:use-module ((guix licenses) #:prefix license:)
+  #:use-module (gnu packages)
   #:use-module (gnu packages pkg-config)
   #:use-module (gnu packages xorg)
   #:use-module (guix build-system gnu)
