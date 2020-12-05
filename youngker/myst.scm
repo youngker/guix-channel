@@ -3,6 +3,7 @@
   #:use-module (gnu packages)
   #:use-module (gnu packages pkg-config)
   #:use-module (gnu packages xorg)
+  #:use-module (gnu packages gtk)
   #:use-module (guix build-system gnu)
   #:use-module (guix git-download)
   #:use-module (guix packages))
@@ -25,9 +26,22 @@
    (arguments
     `(#:make-flags (list "CC=gcc")
       #:phases
-      (modify-phases %standard-phases
-                     (delete 'configure))))
+      (modify-phases
+       %standard-phases
+       (delete 'configure)
+       (delete 'check)
+       (replace 'install
+                (lambda _
+                  (let* ((out (assoc-ref %outputs "out"))
+                         (bin (string-append out "/bin")))
+                    (install-file "st" bin)))))))
    (build-system gnu-build-system)
+   (native-inputs
+    `(("pkg-config" ,pkg-config)))
+   (inputs
+    `(("libxft" ,libxft)
+      ("libx11" ,libx11)
+      ("harfbuzz", harfbuzz)))
    (home-page "tbd")
    (synopsis "tbd")
    (description "tbd")
