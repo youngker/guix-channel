@@ -1,16 +1,10 @@
 (define-module (myst)
   #:use-module ((guix licenses) #:prefix license:)
   #:use-module (guix build-system gnu)
-  #:use-module (gnu packages)
-  #:use-module (gnu packages autotools)
-  #:use-module (gnu packages emacs)
-  #:use-module (gnu packages perl)
-  #:use-module (gnu packages python)
-  #:use-module (gnu packages shells)
-  #:use-module (gnu packages web)
+  #:use-module (gnu packages pkg-config)
+  #:use-module (gnu packages xorg)
   #:use-module (guix git-download)
-  #:use-module (guix packages)
-  #:use-module (guix utils))
+  #:use-module (guix packages))
 
 (define-public yst
   (package
