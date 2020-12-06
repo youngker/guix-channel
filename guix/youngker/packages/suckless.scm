@@ -1,4 +1,4 @@
-(define-module (youngker myst)
+(define-module (youngker packages suckless)
   #:use-module ((guix licenses) #:prefix license:)
   #:use-module (gnu packages)
   #:use-module (gnu packages pkg-config)
@@ -8,10 +8,10 @@
   #:use-module (guix git-download)
   #:use-module (guix packages))
 
-(define-public yst
+(define-public st-patched
   (package
-   (name "yst")
-   (version "0.1")
+   (name "st-patched")
+   (version "0.8.4")
    (source
     (origin
      (method git-fetch)
@@ -42,7 +42,7 @@
     `(("libxft" ,libxft)
       ("libx11" ,libx11)
       ("harfbuzz", harfbuzz)))
-   (home-page "tbd")
-   (synopsis "tbd")
-   (description "tbd")
-   (license license:gpl3+)))
+   (home-page "https://st.suckless.org")
+   (synopsis "Simple terminal emulator")
+   (description "St implements a simple and lightweight terminal emulator.  It implements 256 colors, most VT10X escape sequences, utf8, X11 copy/paste, antialiased fonts (using fontconfig), fallback fonts, resizing, and line drawing.")
+   (license license:x11)))
